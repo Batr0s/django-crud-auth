@@ -125,3 +125,5 @@ LOGIN_URL = '/signin'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ALLOWED_HOSTS = ['localhost', 'web-production-d2c6.up.railway.app']
