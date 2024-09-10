@@ -123,6 +123,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-d2c6.up.railway.app'
+]
+
 # login_required redirige al login, hay que especificar la ruta a mi login, que es '/signin'
 LOGIN_URL = '/signin'
 
