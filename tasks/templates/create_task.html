@@ -1,0 +1,23 @@
+<!-- extends para poder usar la estructura de otro archivo html -->
+{% extends 'base.html' %}
+
+<!-- block content y endblock para insertar el contenido -->
+{% block content %}
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">     
+            <form action="/tasks/create/" method="POST" class="card card-body ">
+                <h1>Create task</h1>
+                {{error}}
+                {% csrf_token %}
+                {{form}}
+                <button class="btn btn-primary">
+                    Save
+                </button>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

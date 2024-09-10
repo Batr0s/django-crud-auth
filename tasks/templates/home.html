@@ -1,0 +1,36 @@
+<!-- extends para poder usar la estructura de otro archivo html -->
+{% extends 'base.html' %}
+
+<!-- block content y endblock para insertar el contenido -->
+{% block content %}
+
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Django App</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nibh arcu, sollicitudin ac finibus sit amet, posuere eu metus. 
+            Aliquam scelerisque neque vel lacus blandit iaculis. Aliquam semper cursus rhoncus. Aenean mattis sapien ac ligula venenatis sodales a 
+            ac libero. Nunc interdum, justo ac egestas posuere, odio mauris gravida urna, in tincidunt nisl eros et est. Phasellus placerat enim magna,
+             ut aliquam orci mattis ut. Nullam mollis dui in ultrices ornare.
+        
+            Sed consectetur risus non velit lacinia, tempus efficitur est faucibus. Vestibulum ut mi turpis. Quisque non augue vel enim tincidunt congue. 
+            Vivamus finibus vestibulum mauris ut interdum. Ut sollicitudin justo magna, in volutpat odio porta id. Nunc semper, ligula at egestas euismod,
+            dolor purus sagittis arcu, et ultricies ex leo sed erat. Pellentesque pretium nisl quis enim commodo, sed tincidunt nunc fermentum. 
+            Vestibulum at nisl sodales, scelerisque massa in, porttitor ligula. Donec ac lacinia lacus. Praesent quis odio vitae erat tincidunt luctus 
+            in nec nisi. Fusce ultricies, purus sed vestibulum efficitur, erat tortor posuere erat, vitae lacinia sapien odio vel libero. In hac 
+            habitasse platea dictumst. Nunc at nunc magna. Aliquam ultrices sed purus sed convallis.
+        </p>
+        <div class="text-center">
+            <a class="btn btn-secondary" href="/signin/">
+                Signin
+            </a>
+            <a class="btn btn-dark" href="/signup/">
+                Signup
+            </a>
+        </div>
+
+    </section>
+</main>
+
+
+{% endblock %}

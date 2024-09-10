@@ -1,0 +1,33 @@
+<!-- extends para poder usar la estructura de otro archivo html -->
+{% extends 'base.html' %}
+
+<!-- block content y endblock para insertar el contenido -->
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form action="" method="POST" class="card card-body mt-5">
+                <h1 class="text-center">Signin</h1>
+                {{error}}
+                {% csrf_token %}
+                <!-- Antes de cambiar los estilos con Bootstrap. Después hemos creado un formulario propio -->
+                <!-- {{form.as_p}} -->
+
+                <div class="mb-3">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Write your username">
+                </div>
+                <div class="mb-3">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Write your password">
+                </div>
+
+                <button class="btn btn-primary">Signin</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
