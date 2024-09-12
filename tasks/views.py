@@ -97,12 +97,12 @@ def create_task(request):
         try:
             # form es el html del formulario TaskForm
             form = TaskForm(request.POST)
-            # new_task contiene los valores del formulario create_task
             new_task = form.save(commit=False)
-            # Ahora le agregamos el usuario
+            # new_task contiene los valores del formulario create_task, commit=False evita que se guarde en una base de datos antes 
+            # de asignarle un valor al campo user de 'new_task', ya que la bbdd espera ese campo, evitando así un IntegrityError.
             new_task.user = request.user
-            # Guardamos la task (se puede ver dentro del panel admin)
             new_task.save()
+            # Una vez guardado new_task se convierte en una instancia de Task y se guarda el registro en la bbdd.
             return redirect('tasks')
         except:
             return render(request, 'create_task.html', {'form': TaskForm, 'error': 'Please, provide valid data'})
